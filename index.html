@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Cards</title>
+    <style>
+        body {
+         display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f9f9f9;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .products-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .product-card {
+            width: min(100%, 280px);
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            transition: opacity 0.3s ease;
+        }
+
+        .product-card img {
+            width:60%;
+            height: auto;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-info h2 {
+            font-size: 16px;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ff4d4f;
+            margin: 0;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 14px;
+            margin-left: 5px;
+        }
+
+        .discount {
+            font-size: 14px;
+            background-color: #ff6961;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            margin-top: 5px;
+        }
+
+        .location {
+            font-size: 13px;
+            color: #999;
+            margin: 10px 0;
+        }
+
+        .rating-sold {
+            display: flex;
+            justify-content: center;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        .rating-sold .rating {
+            color: #FFD700;
+            margin-right: 10px;
+        }
+        /* Pseudo-element selector to add star symbol */
+        .rating-sold .rating::before {
+            content: "★";
+        }
+
+        .sold-count {
+            color: #999;
+            font-size: 13px;
+        }
+
+        .discount-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ff4d4f;
+            color: white;
+            padding: 5px;
+            font-size: 12px;
+            border-radius: 4px;
+        }
+
+        /* Pseudo-class hover effect */
+        .product-card:hover {
+            opacity: 0.9;
+        }
+
+        .buy-button {
+            background-color: #f35719;
+            color: white;
+            padding: 10px;
+            font-size: 14px;
+            cursor: pointer;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            display: block;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .buy-button:hover {
+            background-color: #c1c2c1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="products-container">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <div class="discount-badge">35% OFF</div>
+            <img src="bedak.png" alt="Bedak Hanasui tabur">
+            <div class="product-info">
+                <h2>HANASUI Perfect Fit Setting Powder 12gr | Bedak Loose</h2>
+                <div class="price">Rp38.900 <span class="original-price">Rp59.900</span></div>
+                <div class="discount">Diskon 7K</div>
+                <div class="location">Kota Bekasi</div>
+                <div class="rating-sold">
+                    <span class="rating">5.0</span>
+                    <span class="sold-count">500+ terjual</span>
+                </div>
+            </div>
+            <div class="buy-button">BELANJA SEKARANG  </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <div class="discount-badge">25% OFF</div>
+            <img src="sunscreen.png" alt="Suncreen SKINTIFIC">
+            <div class="product-info">
+                <h2>SKINTIFIC-5X Ceramide Serum Sunscreen SPF50 PA++++ 80mlSun-Repair Invisible Serum 2-in-1</h2>
+                <div class="price">Rp45.900 <span class="original-price">Rp61.200</span></div>
+                <div class="discount">Diskon 5K</div>
+                <div class="location">Kota Medan</div>
+                <div class="rating-sold">
+                    <span class="rating">4.8</span>
+                    <span class="sold-count">300+ terjual</span>
+                </div>
+            </div>
+            <div class="buy-button">BELANJA SEKARANG </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <div class="discount-badge">40% OFF</div>
+            <img src="liptin.png" alt="Liptin Hanasui">
+            <div class="product-info">
+                <h2>Hanasui Tintdorable Lip Stain Tint Lip Tint Ombre</h2>
+                <div class="price">Rp50.900 <span class="original-price">Rp85.200</span></div>
+                <div class="discount">Diskon 10K</div>
+                <div class="location">Kota Banda Aceh</div>
+                <div class="rating-sold">
+                    <span class="rating">4.9</span>
+                    <span class="sold-count">100+ terjual</span>
+                </div>
+            </div>
+            <div class="buy-button">BELANJA SEKARANG </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
